@@ -1,4 +1,4 @@
-# Final Year Project
+# Final Year Project - Leila Assim 6790482
 
 This folder contains the runnable code for the thesis experiment on machine translation and AI-generated text detection.
 
