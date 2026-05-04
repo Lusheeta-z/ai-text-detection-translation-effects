@@ -1,4 +1,4 @@
-# Final Year Project - Leila Assim 6790482
+# Final Year Project
 
 This folder contains the runnable code for the thesis experiment on machine translation and AI-generated text detection.
 
@@ -37,6 +37,19 @@ export GOOGLE_CLOUD_PROJECT_ID="your-project-id"
 ```
 
 ## Main Commands
+
+Prepare the base dataset from the original Kaggle CSVs:
+
+```bash
+python prepare_datasets.py
+```
+
+If the source CSVs are missing, the script will show the required Kaggle links and ask whether to try an automatic download. Automatic download requires the Kaggle API and configured `kaggle.json` credentials:
+
+```bash
+pip install kaggle
+python prepare_datasets.py --download
+```
 
 Translate the base dataset:
 
@@ -82,10 +95,8 @@ python main.py avg-lengths --input data/dataset_with_scores.csv
 
 ## Notes
 
+- The original Kaggle source CSVs (`AI_Human.csv` and `balanced_ai_human_prompts.csv`) are not included because they are large. Download them from the links printed by `prepare_datasets.py` and place them in the project root or `raw_data/`.
 - The translation and detection scripts are resumable: if the output CSV already exists, the pipeline continues from it.
-- The original Kaggle source files used by prepare_datasets.py are not included in the repository but the prepared balanced dataset used in the thesis is provided as data/dataset.csv
-- Some missing translation or detector scores may occur due to API/model failures
 - The final scored dataset is stored at `data/dataset_with_scores.csv`.
 - Missing detector scores are excluded pairwise in metric calculations.
 - Binoculars is optional in code. To reproduce the full detector set, install it from its source repository as noted in `requirements.txt`.
-
