@@ -97,6 +97,7 @@ python main.py avg-lengths --input data/dataset_with_scores.csv
 
 - The original Kaggle source CSVs (`AI_Human.csv` and `balanced_ai_human_prompts.csv`) are not included because they are large. Download them from the links printed by `prepare_datasets.py` and place them in the project root or `raw_data/`.
 - The translation and detection scripts are resumable: if the output CSV already exists, the pipeline continues from it.
+- Some missing translation or detector scores may occur due to API/model failures.
 - The final scored dataset is stored at `data/dataset_with_scores.csv`.
 - Missing detector scores are excluded pairwise in metric calculations.
 - Binoculars is optional in code. To reproduce the full detector set, install it from its source repository as noted in `requirements.txt`.
