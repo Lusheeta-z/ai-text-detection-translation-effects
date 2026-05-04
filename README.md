@@ -96,6 +96,8 @@ python main.py avg-lengths --input data/dataset_with_scores.csv
 ## Notes
 
 - The original Kaggle source CSVs (`AI_Human.csv` and `balanced_ai_human_prompts.csv`) are not included because they are large. Download them from the links printed by `prepare_datasets.py` and place them in the project root or `raw_data/`.
+- The dataset contains English, German, and Urdu text. All CSV files are saved using UTF-8 encoding. To view the Urdu text correctly, open the files in an editor that supports UTF-8 and right-to-left scripts, such as Visual Studio Code, Jupyter Notebook, LibreOffice Calc, or a modern terminal with a Unicode font.
+- If the file is opened in Microsoft Excel and the Urdu text looks misaligned or displayed in the wrong direction, this is usually a display/font issue and not a problem with the data. The Urdu text is stored correctly in the CSV files. For best results, import the CSV using UTF-8 encoding or view it through Python/Pandas or VS Code.
 - The translation and detection scripts are resumable: if the output CSV already exists, the pipeline continues from it.
 - Some missing translation or detector scores may occur due to API/model failures.
 - The final scored dataset is stored at `data/dataset_with_scores.csv`.
