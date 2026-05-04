@@ -83,6 +83,9 @@ python main.py avg-lengths --input data/dataset_with_scores.csv
 ## Notes
 
 - The translation and detection scripts are resumable: if the output CSV already exists, the pipeline continues from it.
+- The original Kaggle source files used by prepare_datasets.py are not included in the repository but the prepared balanced dataset used in the thesis is provided as data/dataset.csv
+- Some missing translation or detector scores may occur due to API/model failures
 - The final scored dataset is stored at `data/dataset_with_scores.csv`.
 - Missing detector scores are excluded pairwise in metric calculations.
 - Binoculars is optional in code. To reproduce the full detector set, install it from its source repository as noted in `requirements.txt`.
+
