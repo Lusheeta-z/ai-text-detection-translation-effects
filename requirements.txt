@@ -14,5 +14,8 @@ google-api-core>=2.15
 # Optional fallback if you want --google-backend googletrans instead of Google Cloud:
 # googletrans==4.0.0rc1
 #
+# Optional for prepare_datasets.py --download:
+# kaggle>=1.6
+#
 # Optional if installing Binoculars from source for full thesis reproduction:
 # git+https://github.com/ahans30/Binoculars.git
